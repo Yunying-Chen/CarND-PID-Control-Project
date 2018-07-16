@@ -24,3 +24,7 @@ I tuned the Proportional, Integral, and Derivative coefficients manually. The P 
 2. Make a build directory: mkdir build && cd build
 3. Compile: cmake .. && make
 4. execute: ./pid.
+
+
+## Performance
+Under differenct environments, it might have different result. "sim_result.mp4" is the result running on my own laptop(Win10,64bit) and it works well.
