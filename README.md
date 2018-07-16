@@ -6,9 +6,9 @@ In this project, a PID controller is implemented in C++ to maneuver the vehicle 
 
 
 ## Dependencies                     
-cmake >= 3.5
-make >= 4.1
-gcc/g++ >= 5.4
+cmake >= 3.5                                                                      
+make >= 4.1                    
+gcc/g++ >= 5.4                             
 
 ## Files
 * src/PID.cpp —— initializes the PID, calculates proportional, integral as well as derivative errors and calculates the steering angle.
