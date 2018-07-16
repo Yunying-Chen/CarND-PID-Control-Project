@@ -16,7 +16,7 @@ gcc/g++ >= 5.4
 
 
 ## How to choose P,I,D                  
-I tuned the Proportional, Integral, and Derivative coefficients manually. The P component establishes linear relationship with the problem.  When the P component is big, it will cause big fluctuations before it reaches stable, which causes the vehicle running out of the track. The I component establishes linear relationship between the average value of problem over time. If the I component is big, it will reach stable faster but it will accumulate the error and cause overshoot. So I tuned I component into very small. The D component establishes linear relationship with the rate of change of problem. When the D component is big, it will reach stable slower but it have less fluctuations. The value of my PID is [0.22, 0.01, 3.0]
+I tuned the Proportional, Integral, and Derivative coefficients manually. The P component establishes linear relationship with the problem.  When the P component is big, it will cause big fluctuations before it reaches stable, which causes the vehicle running out of the track. The I component establishes linear relationship between the average value of problem over time. If the I component is big, it will reach stable faster but it will accumulate the error and cause overshoot. So I tuned I component into very small. The D component establishes linear relationship with the rate of change of problem. When the D component is big, it will reach stable slower but it have less fluctuations. The value of my PID is [0.25, 0.0, 3.0]
   
   
 ## Run the code
