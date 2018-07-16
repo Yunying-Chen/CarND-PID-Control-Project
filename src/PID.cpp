@@ -14,13 +14,13 @@ PID::~PID() {}
 
 void PID::Init(double Kp, double Ki, double Kd) 
 {
-	p[0] = Kp;
-	p[1] = Ki;
-	p[2] = Kd;
+	PID::Kp = Kp;
+	PID::Ki = Ki;
+	PID::Kd = Kd;
 	
-	PID_e[0] = 0.0;  // p_error
-	PID_e[1] = 0.0;   // i_error
-	PID_e[2] = 0.0;   // d_error
+	p_error = 0.0;  
+	i_error = 0.0;   
+	d_error = 0.0;   
 	
 	pre_cte = 0.0;
 	
@@ -31,15 +31,15 @@ void PID::UpdateError(double cte) {
 	
 	if (pre_cte==0) pre_cte=cte;
 	
-	PID_e[0] = cte;
-	PID_e[1] +=cte;
-	PID_e[2] = cte-pre_cte;
+	p_error = cte;
+	i_error +=cte;
+	d_error = cte-pre_cte;
 	
 	pre_cte = cte;
 }
 
 double PID::TotalError() {
-	return PID_e[0]*p[0]+p[1]*PID_e[1]+p[2]*PID_e[2];
+	return -Kp*p_error - Ki*i_error - Kd*d_error;
 }
 
 

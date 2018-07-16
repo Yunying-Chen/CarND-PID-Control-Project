@@ -7,20 +7,19 @@ public:
   /*
   * Errors
   */
-  double PID_e[3];
-
+  double p_error;
+  double i_error;  
+  double d_error;
 
   /*
   * Coefficients
   */ 
-  double p[3];
+  double Kp;
+  double Ki;
+  double Kd;
   
   double pre_cte;
-  
-
-  bool UseTwiddle = false;
-  bool retrial = false;
-  
+    
   
   /*
   * Constructor
